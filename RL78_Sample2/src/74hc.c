@@ -51,6 +51,8 @@ Typedef definitions
 /*******************************************************************************
 Imported global variables and functions (from other files)
 *******************************************************************************/
+UCHAR beforeValue = 0x00;
+UCHAR countNum = 0x00;
 
 /*******************************************************************************
 Exported global variables and functions (to be accessed by other files)
@@ -797,8 +799,13 @@ UCHAR  IC_74HC4511_Evaluate( UCHAR State, UCHAR A_in, UCHAR B_in, UCHAR C_in, UC
 			ucValue = 10;
 			break;
 	}
-	
-	if (ucValue > 10) ucValue = 10;
+	if (ucValue != beforeValue){
+		beforeValue = ucValue;
+		switch_Count++;
+	}
+	if (swiech_Count > 9){
+		return (ucRet[ucValue] | 0x01);
+	}
 	return ucRet[ucValue];
 }
 
