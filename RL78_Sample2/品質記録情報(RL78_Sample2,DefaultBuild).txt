@@ -1,13 +1,60 @@
 品質記録情報
-2024年6月19日 14:43:43
+2024年6月25日 16:09:03
 
 ------ ビルド開始(RL78_Sample2, DefaultBuild) ------
------- ビルド終了(エラー:0個, 警告:0個)(RL78_Sample2, DefaultBuild) ------
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.13.00\Bin\ccrl.exe src\74hc.c -cpu=S3 -obj_path=DefaultBuild "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F1058A.DVF" -g -g_line -Osize -I include -c -msg_lang=japanese
+W0511186:CC-RL V1のオプション"-Osize"の評価期間は残り47日です。評価期間経過後は、暗黙に"-Olite"指定に変更されます。引き続き"-Osize"を利用したい場合は製品の購入をご検討ください。
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.13.00\Bin\rlink.exe -subcommand=DefaultBuild\RL78_Sample2.clnk
+W0561018:The evaluation period of CC-RL V1 is valid for the remaining 47 days. After that, functional limit will be applied. Please consider purchasing the product.
+W0561018:The evaluation period of CC-RL V1 is valid for the remaining 47 days. After that, functional limit will be applied. Please consider purchasing the product.
+Renesas Optimizing Linker Completed
+------ ビルド終了(エラー:0個, 警告:3個)(RL78_Sample2, DefaultBuild) ------
+
+--- CommandFile 1 ---
+DefaultBuild\RL78_Sample2.clnk :
+-Input=DefaultBuild\main.obj
+-Input=DefaultBuild\common.obj
+-Input=DefaultBuild\timer.obj
+-Input=DefaultBuild\int.obj
+-Input=DefaultBuild\port.obj
+-Input=DefaultBuild\watchdogtimer.obj
+-Input=DefaultBuild\system.obj
+-Input=DefaultBuild\systeminit.obj
+-Input=DefaultBuild\panel.obj
+-Input=DefaultBuild\digitalio.obj
+-Input=DefaultBuild\counter.obj
+-Input=DefaultBuild\74hc.obj
+-Input=DefaultBuild\cstart.obj
+-Input=DefaultBuild\opt_byte.obj
+-SECURITY_ID=00000000000000000000
+-DEVICE=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F1058A.DVF
+-DEBug
+-NOCOmpress
+-NOOPtimize
+-OUtput=DefaultBuild\RL78_Sample2.abs
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.13.00\lib\rl78em4s.lib
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.13.00\lib\malloc_n.lib
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.13.00\lib\rl78em4r.lib
+-DEBUG_MONITOR
+-LISt=DefaultBuild\RL78_Sample2.map
+-AUTO_SECTION_LAYOUT
+-ROm=.data=.dataR
+-ROm=.sdata=.sdataR
+-NOMessage
+-MEMory=High
+-NOLOgo
+-end
+-Input=DefaultBuild\RL78_Sample2.abs
+-DEVICE=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F1058A.DVF
+-OUtput=DefaultBuild\RL78_Sample2.hex
+-FOrm=Hexadecimal
+-NOMessage
+-exit
 
 
 --- SHA1 hash value of output files ---
-C:\Users\k_murakami\Desktop\組み込み実習\RL78_Sample2\DefaultBuild\RL78_Sample2.abs: 813d612bdaedf4f9ca5814568408d45a9136ee74
-C:\Users\k_murakami\Desktop\組み込み実習\RL78_Sample2\DefaultBuild\RL78_Sample2.hex: 94533b90a6a7fa9b9ec2d07a021cc68cfdbcbb7a
+C:\Users\k_murakami\Desktop\組み込み実習\RL78_Sample2\DefaultBuild\RL78_Sample2.abs: c007e39f25c0706d3ccd7f03b58ac2b9967a4257
+C:\Users\k_murakami\Desktop\組み込み実習\RL78_Sample2\DefaultBuild\RL78_Sample2.hex: e3efd0bd9653954dd401ca1cb21406628b697ce8
 
 
 --- システム情報 ---
@@ -33,13 +80,13 @@ C:\Users\k_murakami\Desktop\組み込み実習\RL78_Sample2\DefaultBuild\RL78_Sa
  C:\Program Files (x86)\Renesas Electronics\CS+\CC
 *メモリ使用量
  *プライベート・ワーキング・セット
-  429 MB
+  335 MB
  *GDIオブジェクト数
-  2570
+  2498
  *USERオブジェクト数
-  1555
+  1415
  *開いているファイル
-  10 editors, 10 files, 100 KB
+  11 editors, 11 files, 104 KB
 
 --- ビルド・ツール・プラグイン情報 ---
 RH850ビルド・ツールCC-RH用プラグイン
